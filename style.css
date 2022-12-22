@@ -82,14 +82,15 @@ body {
     }
 }
 .title {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: lighter;
     text-align: center;
     font-family: 'Bai Jamjuree', sans-serif;
+    color: var(--violeta-rusa);
 }
 .title span {
     font-weight: bold;
-    font-size: 28px;
+    font-size: 35px;
 }
 .description {
     font-size: var(--sm);
@@ -97,7 +98,7 @@ body {
     margin-top: 0;
     text-align: left;
     font-weight: 100;
-    color: var(--azul-tripan);
+    color: var(--violeta-rusa);
 }
 
 /* aside section */
@@ -121,7 +122,7 @@ body {
     z-index: 2;
     opacity: 1;
 
-    animation: subtitle-opacity 3s linear 2.5s forwards;
+    animation: subtitle-opacity 3s linear 1s forwards;
 }
 @keyframes subtitle-opacity {
     from {
@@ -159,13 +160,13 @@ body {
     grid-row: 6 / 7;
     grid-column: 5 / 6;
 
-    animation: crontreras1-move 3s ease-in-out 1.5s;
+    animation: crontreras1-move 1s ease-in-out 1.5s;
 }
 @keyframes crontreras1-move {
     from {
-        transform: translateY(300px);
+        transform: translateY(100%);
     } to {
-        transform: translateY(0px);
+        transform: translateY(0%);
     }
 }
 .crontreras1-brand a {
@@ -173,4 +174,93 @@ body {
 }
 .crontreras1-brand a:hover {
     color: var(--blanco);
+}
+
+/* footer */
+.best-products {
+    grid-area: footer;
+    background-color: var(--azul-tripan);
+    border-radius: 0 80px 0 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+
+    animation: footer-move 3s ease-in-out 0.5s forwards;
+}
+@keyframes footer-move {
+    from {
+        transform: translateY(100%);
+    } to {
+        transform: translateY(0%);
+    }
+}
+.best-products div {
+    background-color: var(--violeta-rusa);
+    width: 130px;
+    height: 50%;
+    border-radius: 20px 20px 0 0;
+}
+.best-products div img {
+    width: 140px;
+    position: absolute;
+    bottom: 15px;
+    cursor: pointer;
+    transform: translateY(0) scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+.best-products div img:hover {
+    transform: translateY(-30px) scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* loader */
+.loader {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--azul-tripan);
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: loader 2s linear forwards;
+}
+@keyframes loader {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    } 95% {
+        opacity: 1;
+        visibility: visible;
+    } 100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.loader div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--blanco);
+    margin: 10px;
+    transform: scale(0.2);
+
+    animation: scaling 2s ease-in-out infinite;
+}
+@keyframes scaling {
+    0%, 100% {
+        transform: scale(0.2);
+    } 50% {
+        transform: scale(1);
+    }
+}
+.loader div:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.loader div:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.loader div:nth-child(3)  {
+    animation-delay: 0.6s;
 }
