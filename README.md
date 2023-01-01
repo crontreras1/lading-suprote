@@ -12,7 +12,7 @@ Página: [GitHub](https://crontreras1.github.io/lading-suprote/)
 - JavaScript
 
 ## Pantallazo 
-[!](./src/screenshot-landing-suprote.png)
+![](./src/screenshot-landing-suprote.png)
 
 ## Licencia
 Licencia MIT
