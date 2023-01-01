@@ -11,6 +11,9 @@ Página: [GitHub](https://crontreras1.github.io/lading-suprote/)
 - CSS Grid
 - JavaScript
 
+## Pantallazo 
+[!](./src/screenshot-landing-suprote.png)
+
 ## Licencia
 Licencia MIT
 
